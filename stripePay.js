@@ -32,8 +32,8 @@ window.onload = function() {
               //{sku: penguinarray[whichpenguin], quantity: 1}
               {sku: penguinarray[whichpenguin], quantity: 1}
             ],
-            successUrl: 'success.html',
-            cancelUrl: 'cancel.html',
+            successUrl: 'https://ajm11.github.io/stripe_integration/success.html',
+            cancelUrl: 'https://ajm11.github.io/stripe_integration/cancel.html',
           }).then(function (result) {
             // If `redirectToCheckout` fails due to a browser or network
             // error, display the localized error message to your customer
