@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <title>Alex's Stripe Shop</title>
+        <meta name="description" content="">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link rel="stylesheet" href="style.css">
+        <script src="stripePay.js"></script>
+        <script src="https://js.stripe.com/v3/"></script>
+    </head>
+    <body>
+        <p>Your very own (open to commercial reuse) penguin pic.</p>
+        <div class="row">
+            <div class="divLeft">
+                <img id="penguin-img" src="https://images.pexels.com/photos/2078475/pexels-photo-2078475.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940">
+            </div>
+            <div class="divRight">
+                <img id="penguin-img" src="https://images.pexels.com/photos/60088/pexels-photo-60088.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260">
+            </div>
+        </div>
+        <div class="row">
+            <div class="divLeft">
+                <button class="choosepenguin" id="leftpenguin">Choose this penguin</button>
+            </div>
+            <div class="divRight">
+                <button class="choosepenguin" id="rightpenguin">Choose this penguin</button>
+            </div>
+        </div>
+        <div class="row">
+            <button id="checkoutbutton">Check out now</button>
+        </div>
+    </body>
+</html>

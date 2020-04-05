@@ -1,0 +1,76 @@
+
+
+h1 {
+    font-family: Arial, Helvetica, sans-serif;
+    color:darkslateblue;
+}
+
+p {
+    font-family: Arial, Helvetica, sans-serif;
+    color:darkslateblue;
+}
+
+
+.row{
+    width: 100%;
+    content: "";
+    display: table;
+    clear: both;
+    padding-top: 3px;
+    padding-bottom: 1px;
+    text-align:center;
+    background-color:lightyellow;
+}
+
+.divLeft{
+    width: 48%;
+    height: auto;
+    float: left;
+    text-align:center;
+    background-color:lightyellow;
+    padding: 1px;
+}
+
+.divRight{
+    width: 48%;
+    height: auto;
+    float: left;
+    text-align:center;
+    background-color:lightyellow;
+    padding: 1px;
+}
+
+#penguin-img {
+    max-width: 60%;
+    height: auto;
+    border: 1px solid lightblue;
+    padding: 5px;
+    border-radius: 1px;
+    text-align:center;
+}
+
+.choosepenguin{
+    background-color: lightsteelblue;
+    border: none;
+    color:darkslateblue;
+    padding: 5px 16px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 14px;
+    justify-content: center;
+    margin:auto;
+}
+
+#checkoutbutton {
+    background-color: darkslateblue;
+    border: none;
+    color:white;
+    padding: 15px 32px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    justify-content: center;
+    margin:auto;
+}
