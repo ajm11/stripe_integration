@@ -46,7 +46,6 @@ window.onload = function() {
         createButton.innerText = 'Choose this penguin';
         createButton.addEventListener('click',function(){
             whichPenguin = i;
-            console.log(whichPenguin);
         })
         
         createPenguins.appendChild(createPenguinImage);
@@ -54,6 +53,28 @@ window.onload = function() {
 
         // Append the product to the row overall
         penguinRow.appendChild(createPenguins);
+    }
+    
+        // Define the checkout button and set a listener for clicks to check out
+        var checkout = document.getElementById("checkoutbutton");
+        checkout.addEventListener('click', async function(){
+            if (whichPenguin == undefined) {
+                alert("Pick a penguin in order to check out.");
+            } else{
+                stripe.redirectToCheckout({
+                    items: [                
+                    {sku: items[whichPenguin].sku, quantity: 1}
+                    ],
+                    successUrl: 'https://ajm11.github.io/stripe_integration/success.html',
+                    cancelUrl: 'https://ajm11.github.io/stripe_integration/cancel.html',
+                }).then(function (result) {
+                    // If `redirectToCheckout` fails due to a browser or network
+                    // error, display the localized error message to your customer
+                    // using `result.error.message`.
+                    console.log(result.error.message)
+                });
+            }
+        })
     }
     
 
@@ -81,27 +102,4 @@ window.onload = function() {
 
     })
     */
-    // Define the checkout button and set a listener for clicks to check out
-    var checkout = document.getElementById("checkoutbutton");
-    checkout.addEventListener('click', async function(whichPenguin){
-        console.log(whichPenguin);
-        /*if (whichPenguin == undefined) {
-            alert("Pick a penguin in order to check out.");
-        } else{
-            console.log("In checkout " + items[whichPenguin].sku);
-            stripe.redirectToCheckout({
-                items: [                
-                {sku: items[whichPenguin].sku, quantity: 1}
-                ],
-                successUrl: 'https://ajm11.github.io/stripe_integration/success.html',
-                cancelUrl: 'https://ajm11.github.io/stripe_integration/cancel.html',
-            }).then(function (result) {
-                // If `redirectToCheckout` fails due to a browser or network
-                // error, display the localized error message to your customer
-                // using `result.error.message`.
-                console.log(result.error.message) // ADD THIS LINE!
-            });
-        }*/
-    })
-}
      
